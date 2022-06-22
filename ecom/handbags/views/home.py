@@ -6,6 +6,6 @@ from ..models import Products
   
 # Create your views here.
              
-class HomeView(viewsets.ModelViewSet):  
+class HomeViewSet(viewsets.ModelViewSet):  
     serializer_class = ProductSerializer   
     queryset = Products.objects.all()   

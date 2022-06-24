@@ -1,11 +1,11 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
-from ..serializers import ProductSerializer 
-from rest_framework import viewsets   
+from rest_framework import viewsets  
+from ecom.handbags.models.products import Products
+from ecom.handbags.serializers import ProductsSerializer
 # from django.views import View
-from ..models import Products   
   
 # Create your views here.
              
-class HomeViewSet(viewsets.ModelViewSet):  
-    serializer_class = ProductSerializer   
+class HomeView(viewsets.ModelViewSet):  
+    serializer_class = ProductsSerializer  
     queryset = Products.objects.all()   

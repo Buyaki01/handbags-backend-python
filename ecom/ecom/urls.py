@@ -19,13 +19,15 @@ from django.urls import path, include
 # from django.conf.urls.static import static
 # from . import settings
 from rest_framework import routers
-from  handbags.views import home
 
-router = routers.DefaultRouter() 
-router.register(r'handbags', home.HomeViewSet, basename='handbags')
+# from ecom.handbags.views.home import HomeView
+
+# router = routers.DefaultRouter() 
+# router.register(r'handbags', HomeView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('handbags/', include('handbags.urls')),
+    
 ] 
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

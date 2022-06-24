@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from ecom.handbags.models.products import Products
+from handbags.models.products import Products
 
 class ProductsSerializer(serializers.ModelSerializer):
   class Meta:

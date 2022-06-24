@@ -2,6 +2,8 @@ from django import views
 from django.contrib import admin
 from django.urls import path
 from .views.home import HomeView
+app_name = 'handbags' 
+
 # from .views.signup import Signup
 # from .views.login import Login, logout
 # from .views.cart import Cart

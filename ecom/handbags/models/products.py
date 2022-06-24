@@ -1,6 +1,6 @@
 from django.db import models
 
-from ecom.handbags.models.category import Category
+from handbags.models.category import Category
 # from .category import Category
   
   
@@ -13,4 +13,4 @@ class Products(models.Model):
     image = models.ImageField(upload_to='uploads/products/')
 
     def __str__(self):
-        return f"{self.title}"
+        return f"{self.name}"

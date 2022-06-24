@@ -18,16 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 # from django.conf.urls.static import static
 # from . import settings
-from rest_framework import routers
-
+# from rest_framework import routers
 # from ecom.handbags.views.home import HomeView
-
 # router = routers.DefaultRouter() 
 # router.register(r'handbags', HomeView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('handbags/', include('handbags.urls')),
-    
+    path('', include('handbags.urls')),  
 ] 
 # + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

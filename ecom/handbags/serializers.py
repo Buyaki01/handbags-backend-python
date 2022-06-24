@@ -1,26 +1,8 @@
 from rest_framework import serializers
-from models import (Category,
-        Orders,
-        Products,
-        User, 
-        )
 
-class CategorySerializer(serializers.ModelSerializer):
-  class Meta:
-    model = Category
-    fields = '__all__'
-
-class OrdersSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = Orders
-    fields = '__all__'
+from ecom.handbags.models.products import Products
 
 class ProductsSerializer(serializers.ModelSerializer):
   class Meta:
     model = Products
-    fields = '__all__'
-
-class UserSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = User
     fields = '__all__'

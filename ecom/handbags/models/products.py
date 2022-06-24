@@ -1,5 +1,7 @@
 from django.db import models
-from .category import Category
+
+from ecom.handbags.models.category import Category
+# from .category import Category
   
   
 class Products(models.Model):
@@ -9,3 +11,6 @@ class Products(models.Model):
     description = models.CharField(
         max_length=250, default='', blank=True, null=True)
     image = models.ImageField(upload_to='uploads/products/')
+
+    def __str__(self):
+        return f"{self.title}"
